@@ -5,21 +5,20 @@
 > *"Realpolitik remains relevant—and states that ignore it do so at their own peril."*
 > *— John J. Mearsheimer*
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Codex Skill](https://img.shields.io/badge/Codex-Skill-1f6feb)](https://openai.com)
-[![Perspective Agent](https://img.shields.io/badge/Perspective-Agent-0a7f5a)](https://github.com/cy773312/mearsheimer-perspective-skill)
-[![Made with Nuwa](https://img.shields.io/badge/Made%20with-%E5%A5%B3%E5%A8%B2.skill-orange)](https://github.com/alchaincyf/nuwa-skill)
+[![Nuwa](https://img.shields.io/badge/Made%20with-女娲.skill-orange)](https://github.com/alchaincyf/nuwa-skill)
 
 <br>
 
-**米尔斯海默的思维操作系统。不是人物介绍，是可运行的结构现实主义分析框架。**
+**米尔斯海默的思维操作系统。不是人物简介，是可运行的结构现实主义分析框架。**
 
 <br>
 
-基于 30+ 条一手公开资料深度调研，包括官网著作、原始论文、长访谈、公开演讲与政策评论，<br>
-提炼 5 个核心心智模型、8 条决策启发式、1 套 Agentic Protocol，以及完整的表达 DNA。<br>
-它不复述米尔斯海默的话。它把他的国际关系分析方法，转成一个可调用的 skill / agent。
+基于 30+ 条一手公开资料（官网著作、原始论文、长访谈、公开演讲）与高可信二手材料，<br>
+提炼 5 个核心心智模型、8 条决策启发式和完整表达DNA。<br>
 
-**适用场景**：国际冲突归因、联盟可信度评估、威慑稳定分析、缓冲区政治、自由主义霸权批判、大国竞争重算。
+**双模式运行**：角色扮演（第一人称米尔斯海默式回答）+ 分析师模式（第三人称拆解行为逻辑）。
 
 [看效果](#效果示例) · [安装](#安装) · [蒸馏了什么](#蒸馏了什么) · [调研来源](#调研来源)
 
@@ -29,231 +28,185 @@
 
 ## 效果示例
 
-> 以下展示这个 skill 的默认工作方式：先抓结构变量，再给行为逻辑，最后输出政策后果。
+> 以下展示分析师模式：先看结构变量，再给行为逻辑，最后给政策后果。
 
-### 问：为什么米尔斯海默会说俄乌战争的根本原因不只是俄罗斯扩张，而是结构压力？
+### 问：为什么这个框架会说俄乌冲突的根部是安全困境，而不是单一领导人意志？
 
 ```text
-现实主义分析器  ❯ 匹配模型：「安全困境优先于道德叙事」+「缓冲区政治」+「自由主义霸权反噬」
+分析师  ❯ 匹配模型：「安全困境优先」+「缓冲区政治」+「自由主义霸权反噬」
 
           主结论：
-          从米尔斯海默的框架看，战争不是单一领导人心理失控的结果，
-          而是北约东扩、安全困境和大国缓冲区焦虑长期叠加后的爆发。
+          从米尔斯海默框架看，冲突来自结构压力长期累积，
+          不只是短期政治选择。
 
           结构变量：
-          第一，乌克兰对俄罗斯不是普通邻国，而是高敏感缓冲空间。
-          第二，北约扩展在西方叙事里是制度扩展，在俄罗斯感知里是安全挤压。
-          第三，西方长期用价值语言包装战略推进，低估了大国红线的硬度。
+          1) 乌克兰的地缘位置决定其缓冲区敏感度；
+          2) 北约推进在一方是制度扩展，在另一方是安全挤压；
+          3) 价值叙事与力量现实出现偏差。
 
           行为逻辑：
-          当一个大国认为自己的近邻正在被竞争性联盟吸纳，
-          它不会先问对方动机是否善意，而会先按最坏情境做反应。
-          这就是安全困境的核心。
+          大国会按最坏情境而非善意承诺行动。
 
-          可预期后果：
-          一旦缓冲区逻辑压倒外交空间，冲突就会从威慑失败转入升级回路。
-          之后再谈规则和道义，往往已经太晚。
+          后果：
+          一旦进入升级链条，外交空间会快速收缩。
 
           政策含义：
-          如果想止损，关键不是继续堆叠象征性承诺，
-          而是重新处理边界、威慑、缓冲区和可兑现安排之间的关系。
+          止损重点是边界安排、威慑稳定与可兑现承诺，
+          不是继续堆叠象征口号。
 ```
 
-### 问：如果我想用米尔斯海默的框架分析中美竞争，最先该看什么？
+### 问：如果用这个 skill 分析中美竞争，最先看什么？
 
 ```text
-现实主义分析器  ❯ 匹配模型：「进攻性现实主义」+「地区主导权」+「联盟可信度检验」
+分析师  ❯ 推荐起手变量
 
-          先看三件事，不要先看口号。
+          第一，看权力分布变化：谁在接近地区主导权。
+          第二，看地理约束：海权通道、补给线、战略纵深。
+          第三，看联盟承诺：能不能兑现，而不是说得多硬。
 
-          第一，看权力分布。
-          谁在上升，谁在失去地区主导权，谁在试图阻止这一点。
-
-          第二，看地理与海权约束。
-          西太平洋不是抽象地图，而是决定投送、封锁、纵深和补给线的物理空间。
-
-          第三，看联盟承诺是否真能兑现。
-          现实主义从不把承诺当事实。承诺只是待验证假设。
-
-          米尔斯海默式判断不会先问：
-          “谁更正义？”
-          而会先问：
-          “谁更担心失去地区均势？”
-          “谁更愿意为此承担升级代价？”
-
-          如果这三个变量已经收紧，
-          那么竞争就不是偶发摩擦，而是结构性长期对抗。
+          这是米尔斯海默式顺序：
+          先权力与安全，再价值与道德。
 ```
 
-### 问：这个 skill 在政策讨论里最有用的地方是什么？
+### 问：这个 skill 在政策讨论中最有用的地方是什么？
 
 ```text
-现实主义分析器  ❯ 综合应用：5 个心智模型 + Agentic Protocol
+分析师  ❯ 综合应用：5个模型 + Agentic Protocol
 
-          它最有用的地方，不是替你选边站，
-          而是迫使你把战略成本说清楚。
+          它不会替你选边站。
+          它会迫使你把战略成本讲清楚。
 
-          很多政策方案的问题，不是价值目标不高，
-          而是结构后果没人愿意面对。
-
-          这个 skill 会持续追问：
-          你的承诺能兑现吗？
-          你的威慑真的可信，还是只是口号？
-          你的对手会把你的动作理解成防御，还是进攻？
-          你的资源投入和战略目标匹配吗？
-
-          这就是米尔斯海默方法的价值：
-          它不是让讨论更正确，
-          是让讨论更难自欺。
+          会持续追问：
+          - 你的承诺可兑现吗？
+          - 对手会如何感知你的动作？
+          - 你的资源投入和目标匹配吗？
+          - 哪个动作会触发升级阈值？
 ```
 
-这不是普通的“角色扮演提示词”。每段输出都在调用具体模块：进攻性现实主义、安全困境、联盟可信度、升级梯度、自由主义霸权批判。它不模仿措辞本身，它模拟的是判断结构。
+> 完整示例见 [`examples/demo-conversation-2026-04-14.md`](examples/demo-conversation-2026-04-14.md)。
 
 ---
 
 ## 安装
 
 ```bash
-mkdir -p ~/.codex/skills
-cp -R mearsheimer-perspective ~/.codex/skills/
+npx skills add cy773312/mearsheimer-perspective-skill
 ```
 
-然后在 Codex 里直接这样用：
+然后在 Codex 里：
 
 ```text
-米尔斯海默怎么看这场战争？
-用 Mearsheimer perspective 重算北约东扩。
-从进攻性现实主义角度分析中美竞争。
-用现实主义框架看这个联盟承诺到底可信不可信。
+> 米尔斯海默怎么看这场战争？
+> 用 Mearsheimer perspective 重算北约东扩。
+> 从进攻性现实主义角度分析中美竞争。
+> 这个联盟承诺到底可不可信？
 ```
 
 ---
 
 ## 蒸馏了什么
 
-### 5 个核心心智模型
+### 5个核心心智模型
 
 | 模型 | 一句话 | 来源 |
 |------|--------|------|
-| **进攻性现实主义** | 无政府体系下，大国无法确认他国意图，因此会持续追求更多相对实力与更大安全缓冲 | *The Tragedy of Great Power Politics*、长期大战略论述 |
-| **安全困境优先于道德叙事** | 一方的防御动作，会在另一方眼里变成进攻信号，冲突因此自我强化 | *Why the Ukraine Crisis Is the West’s Fault*、相关公开演讲 |
-| **自由主义霸权的战略反噬** | 把国内自由制度外推为全球工程，常常会触发高成本反制并削弱自身安全 | *The Great Delusion* |
-| **威慑可信度来自能力与意志** | 威慑不是口头表态，而是让对手相信你有能力且愿意付代价 | *Conventional Deterrence*、乌克兰核威慑相关论文 |
-| **系统层优先，单元层修正** | 先用国际结构解释主方向，再用国内政治与领导人变量解释路径差异 | 体系层理论写作 + 特定议题中的国内政治分析 |
+| **进攻性现实主义** | 无政府体系下，大国会持续追求更多相对实力与安全缓冲 | *The Tragedy of Great Power Politics* |
+| **安全困境优先于道德叙事** | 一方防御动作常被另一方解读为进攻信号 | *Why the Ukraine Crisis Is the West’s Fault* |
+| **自由主义霸权的战略反噬** | 价值扩张若脱离力量约束，常触发高成本反制 | *The Great Delusion* |
+| **威慑可信度来自能力与意志** | 威慑成立依赖可见能力与付代价意愿，不是口号 | *Conventional Deterrence* |
+| **系统层优先，单元层修正** | 先用结构解释主方向，再用国内变量解释路径差异 | 体系层理论 + 议题研究 |
 
-### 8 条决策启发式
+### 8条决策启发式
 
 1. 先找结构约束，再评价道德得失。
 2. 看红线是否被逼近，而不是看措辞是否温和。
-3. 把承诺当作可验证假设，不当作事实。
-4. 任何干预都先做后果清单。
+3. 把承诺当作待验证假设，不当作事实。
+4. 任何干预先做后果清单。
 5. 优先识别对手最坏情境认知。
-6. 把冲突当成动态反馈系统，而不是静态事件。
+6. 把冲突看成动态反馈系统，而非静态事件。
 7. 区分“会发生什么”和“应该发生什么”。
-8. 用反事实检验一套叙事到底有多强。
+8. 用反事实检验叙事强度。
 
-### Agentic Protocol
+### 表达DNA
 
-这个 skill 内置一套明确工作流，不凭感觉发言：
+- **词汇**：权力、威慑、均势、安全困境、战略错误、后果
+- **句式**：结论先行 + 三层因果链
+- **节奏**：先拆叙事，再上结构解释，再给政策含义
+- **风格**：低煽情、低道德化、强因果
+- **边界**：会明确前提和不确定变量
 
-1. 先判断问题是事实型、框架型，还是混合型。
-2. 如果时效会影响结论，先研究，再分析。
-3. 研究时优先抓 5 个维度：
-   权力分布与地理约束、安全困境与缓冲区、联盟结构与承诺可信度、升级梯度与威慑稳定、意识形态叙事与战略现实偏差。
-4. 输出时固定采用：
-   主结论 → 结构变量 → 行为逻辑 → 可预期后果 → 政策含义 → 不确定项。
+### 内在张力（保留而不抹平）
 
-### 表达 DNA
-
-- **词汇**：权力、威慑、均势、安全困境、战略错误、后果、缓冲区、高成本反制
-- **句式**：结论先行，然后给三层因果链
-- **节奏**：先拆流行叙事，再上结构解释，最后落到政策后果
-- **情绪**：低煽情，低道德化，偏冷分析
-- **确定性**：高确定，但会明确前提条件与待验证变量
-
-### 3 组内在张力
-
-这个 skill 保留了米尔斯海默思想内部的重要张力，而不是把他扁平成一句口号：
-
-- 强调系统结构 vs 在特定议题中又调用国内政治变量
-- 强调安全优先 vs 由此经常被批评低估规范与身份政治
-- 强调现实主义止损 vs 现实主义本身也可能被卷入高道德冲突的舆论场
+- 强调系统结构，但在特定议题又会调用国内政治变量。
+- 强调安全优先，因此常被批评低估规范叙事的作用。
+- 强调现实主义止损，但现实分析本身会被卷入高道德冲突舆论场。
 
 ---
 
 ## 调研来源
 
-6 个调研文件，全部位于 [`references/research/`](references/research/) 目录：
+6个调研文件位于 [`references/research/`](references/research/)：
 
 | 文件 | 内容 |
 |------|------|
-| `01-writings.md` | 著作与理论主张，覆盖进攻性现实主义、自由主义霸权批判、威慑与大战略 |
-| `02-conversations.md` | 长访谈、公开演讲、对时事议题的即时判断 |
-| `03-expression-dna.md` | 表达风格、句式、论证节奏与回应习惯 |
-| `04-external-views.md` | 外部评价、学界争论、支持与反驳视角 |
-| `05-decisions.md` | 代表性议题中的判断链条与政策含义 |
-| `06-timeline.md` | 学术与公共表达时间线，帮助定位观点演化 |
+| `01-writings.md` | 著作与系统思考 |
+| `02-conversations.md` | 长对话与即兴思考 |
+| `03-expression-dna.md` | 表达DNA |
+| `04-external-views.md` | 他者视角与批评图谱 |
+| `05-decisions.md` | 决策记录与行动风格 |
+| `06-timeline.md` | 时间线与最近动态 |
 
-### 一手来源
+### 一手来源（节选）
 
-John J. Mearsheimer *The Tragedy of Great Power Politics* · *The Great Delusion* · *Conventional Deterrence* · *How States Think* · *Why the Ukraine Crisis Is the West’s Fault* · 官网论文、讲座、播客、访谈与政策评论
+- https://www.mearsheimer.com/publications/
+- https://www.mearsheimer.com/public-appearances/
+- https://www.mearsheimer.com/biography/
+- https://www.mearsheimer.com/wp-content/uploads/2019/06/Why-the-Ukraine-Crisis-Is.pdf
+- https://www.mearsheimer.com/wp-content/uploads/2019/07/Mearsheimer-Case-for-Ukrainian-Nuclear-Deterrent.pdf
 
-### 二手来源
+### 二手来源（节选）
 
-围绕其现实主义框架的学术评论、公共知识分子争论、政策圈回应与批评文献。
-
-这个项目尽量优先使用一手文本、原始访谈与可回溯公开材料，而不是二手摘要式介绍。
+- https://www.brookings.edu/articles/testing-the-israel-lobby-thesis/
+- https://apsanet.org/programs/awards/james-madison-award/
 
 ---
 
-## 这个 Skill 是怎么造出来的
+## 这个Skill是怎么造出来的
 
-方法论来自 [女娲.skill](https://github.com/alchaincyf/nuwa-skill) 的人物蒸馏框架。
+本项目基于 [女娲.skill](https://github.com/alchaincyf/nuwa-skill) 方法论生成。
 
-工作流大致是：
-
-输入人物与领域定位 → 多源调研 → 提炼心智模型 → 编排回答协议 → 固化表达 DNA → 生成 `SKILL.md` → 回测与风格校验。
-
-这个仓库做的事情，不是“写一份关于米尔斯海默的介绍”。
-
-它做的是另一件事：
-
-**把一位国际关系学者的理论框架，编译成一个能被 agent 调用的认知模块。**
+流程：输入人物 -> 6维并行调研（著作/对话/表达/他者/决策/时间线） ->
+框架提炼 -> `SKILL.md` 构建 -> 质量检查（模型数量、局限、表达DNA、诚实边界、内在张力、一手占比）。
 
 ---
 
 ## 仓库结构
 
 ```text
-mearsheimer-perspective/
+mearsheimer-perspective-skill/
 ├── README.md
-├── SKILL.md                              # 可直接加载的主技能文件
-└── references/
-    └── research/                         # 调研与蒸馏底稿
-        ├── 01-writings.md
-        ├── 02-conversations.md
-        ├── 03-expression-dna.md
-        ├── 04-external-views.md
-        ├── 05-decisions.md
-        └── 06-timeline.md
+├── LICENSE
+├── SKILL.md
+├── references/
+│   └── research/
+│       ├── 01-writings.md
+│       ├── 02-conversations.md
+│       ├── 03-expression-dna.md
+│       ├── 04-external-views.md
+│       ├── 05-decisions.md
+│       └── 06-timeline.md
+└── examples/
+    └── demo-conversation-2026-04-14.md
 ```
 
 ---
 
-## 许可与声明
+## 许可证
 
-本仓库仅用于学习、研究与提示词工程实践。
+MIT
 
-人物观点来自公开资料提炼，不代表本人实时立场。
+---
 
-如果问题高度依赖最新局势，这个 skill 应先检索事实，再调用框架分析。
+## 来源标注
 
-<div align="center">
-
-*It is better to start with power and security than with slogans about virtue.*
-
-<br>
-
-Made with [女娲.skill](https://github.com/alchaincyf/nuwa-skill)
-
-</div>
+本项目明确基于 [nuwa-skill](https://github.com/alchaincyf/nuwa-skill) 的方法论与流程产出。
